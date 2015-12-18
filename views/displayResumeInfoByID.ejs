@@ -1,0 +1,31 @@
+<% if(rs.length > 0) { %>
+<h1> Account</h1>
+<hr>
+<div>
+First Name: <%= rs[0].fName %> <br />
+Last Name <%= rs[0].lName %><br />
+Email: <%= rs[0].email %> <br />
+Password: <%= rs[0].Apassword %> <br />
+</div>
+<h2> Company </h2>
+Company Name: <%= rs[0].cName %> <br />
+
+<h2> Company Location </h2>
+Street: <%= rs[0].streetAddress %> <br />
+City: <%= rs[0].city %> <br />
+State: <%= rs[0].state %> <br />
+Zip: <%= rs[0].zip %> <br />
+
+<h2> Skills </h2>
+Skill: <%= rs[0].sName %> <br />
+Description: <%= rs[0].description %> <br />
+Date: <%= rs[0].date %> <br />
+Job Name: <%= rs[0].jobName %> <br />
+
+<h2> GPA </h2>
+GPA: <%= rs[0].gpa %> <br />
+
+<br />
+<% } else { %>
+No account matched this school id <%= school_id %>.
+<% } %>

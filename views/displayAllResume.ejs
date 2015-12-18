@@ -1,0 +1,25 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Name</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/resume/?resume_id=<%= rs[i].resume_id %>"> <%= rs[i].rName %></a></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No accounts are entered into the Account database table.
+    <% } %>
+</div>
+
+<div style="margin-top:10px;">
+    <a href="/res/create">Create New Account</a> <br> <br> <br>
+    <p>Delete or Edit Resumes:</p>
+    <% for (var i =0; rs.length > i; i++) {%>
+    <tr>
+        <td><a href="/resume/edit?resume_id =<%= rs[i].resume_id%>"> <%=rs[i].rName%></a></td> <br>
+        <td><a href="/resume/delete?resume_id=<% rs[i].resume_id%>"> Delete Resume</a></td> <br>
+    </tr>
+        <% }%>
+</div>
